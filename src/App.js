@@ -31,8 +31,12 @@ const App = ({ signOut }) => {
     await Promise.all(
       notesFromAPI.map(async (note) => {
         if (note.image) {
+          console.log("image");
           const url = await Storage.get(note.name);
           note.image = url;
+        }
+        else {
+          console.log("no image");
         }
         return note;
       })
@@ -44,12 +48,16 @@ const App = ({ signOut }) => {
     event.preventDefault();
     const form = new FormData(event.target);
     const image = form.get("image");
+    console.log(`Image name: ${image.name}`);
     const data = {
       name: form.get("name"),
       description: form.get("description"),
       image: image.name,
     };
-    if (!!data.image) await Storage.put(data.name, image);
+    if (!!data.image) {
+      const res = await Storage.put(data.name, image);
+      console.log(JSON.stringify(res));
+    }
     await API.graphql({
       query: createNoteMutation,
       variables: { input: data },
@@ -100,7 +108,7 @@ const App = ({ signOut }) => {
           </Button>
         </Flex>
       </View>
-      <Heading level={2}>Current Notes</Heading>
+      <Heading level={2}>Current Notes 2</Heading>
       <View margin="3rem 0">
         {notes.map((note) => (
           <Flex

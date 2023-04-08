@@ -4,6 +4,7 @@ type Note {
   name: String!
   description: String
   image: String
+  test: String
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
@@ -168,6 +169,7 @@ input ModelNoteFilterInput {
   name: ModelStringInput
   description: ModelStringInput
   image: ModelStringInput
+  test: ModelStringInput
   and: [ModelNoteFilterInput]
   or: [ModelNoteFilterInput]
   not: ModelNoteFilterInput
@@ -182,6 +184,7 @@ input ModelNoteConditionInput {
   name: ModelStringInput
   description: ModelStringInput
   image: ModelStringInput
+  test: ModelStringInput
   and: [ModelNoteConditionInput]
   or: [ModelNoteConditionInput]
   not: ModelNoteConditionInput
@@ -192,6 +195,7 @@ input CreateNoteInput {
   name: String!
   description: String
   image: String
+  test: String
 }
 
 input UpdateNoteInput {
@@ -199,6 +203,7 @@ input UpdateNoteInput {
   name: String
   description: String
   image: String
+  test: String
 }
 
 input DeleteNoteInput {
@@ -216,6 +221,7 @@ input ModelSubscriptionNoteFilterInput {
   name: ModelSubscriptionStringInput
   description: ModelSubscriptionStringInput
   image: ModelSubscriptionStringInput
+  test: ModelSubscriptionStringInput
   and: [ModelSubscriptionNoteFilterInput]
   or: [ModelSubscriptionNoteFilterInput]
 }

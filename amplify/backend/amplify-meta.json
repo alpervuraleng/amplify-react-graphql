@@ -12,6 +12,33 @@
       "AmplifyAppId": "d19g2jgk0k23x5"
     }
   },
+  "api": {
+    "amplifyreactgraphql": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "mnnmddcudzdd7dgifnc4ufdzvm",
+        "GraphQLAPIEndpointOutput": "https://pgeejk73ffcp3nqnp5xnitexhu.appsync-api.us-east-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-zh4lggzp7rfe3g577wjsdyp3o4"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-04-08T19:12:35.328Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifye6fb9d61f2c04-staging-135101-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiamplifyreactgraphql"
+      },
+      "lastPushDirHash": "dA+Hah4jSF7CzNlO+5XgnhGnXNk="
+    }
+  },
   "auth": {
     "amplifyreactgraphql42ae6d3f": {
       "customAuth": false,
@@ -45,53 +72,27 @@
         "IdentityPoolName": "amplifyreactgraphql42ae6d3f_identitypool_42ae6d3f__staging",
         "UserPoolName": "amplifyreactgraphql42ae6d3f_userpool_42ae6d3f"
       },
-      "lastPushTimeStamp": "2023-04-08T18:57:24.551Z",
+      "lastPushTimeStamp": "2023-04-08T19:12:30.275Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifye6fb9d61f2c04-staging-135101-deployment/amplify-cfn-templates/auth/amplifyreactgraphql42ae6d3f-cloudformation-template.json",
         "logicalId": "authamplifyreactgraphql42ae6d3f"
-      }
-    }
-  },
-  "api": {
-    "amplifyreactgraphql": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": []
-        },
-        "GraphQLAPIIdOutput": "mnnmddcudzdd7dgifnc4ufdzvm",
-        "GraphQLAPIEndpointOutput": "https://pgeejk73ffcp3nqnp5xnitexhu.appsync-api.us-east-2.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-zh4lggzp7rfe3g577wjsdyp3o4"
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifye6fb9d61f2c04-staging-135101-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apiamplifyreactgraphql"
-      },
-      "lastPushTimeStamp": "2023-04-08T18:57:24.553Z",
-      "lastPushDirHash": "/k4vKT705iZ06FbwhVRZj7DKox8="
+      "lastPushDirHash": "TNttQN4ezfH9/MBZr37dEqs9ClY="
     }
   },
   "storage": {
     "amplifybucket1": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2023-04-08T18:57:26.046Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifye6fb9d61f2c04-staging-135101-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storageamplifybucket1"
-      },
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
       "output": {
         "BucketName": "amplifybucket1135101-staging",
         "Region": "us-east-2"
+      },
+      "lastPushTimeStamp": "2023-04-08T19:12:30.277Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifye6fb9d61f2c04-staging-135101-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageamplifybucket1"
       },
       "lastPushDirHash": "xv4tsGcKIpMPunSOHqUOypOWpZ0="
     }
